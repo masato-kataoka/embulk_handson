@@ -1,0 +1,40 @@
+in:
+  type: 
+  path_prefix: ./station20190405free.csv
+  parser:
+    charset: UTF-8
+    newline: LF
+    type: 
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: station_cd, type: long}
+    - {name: station_g_cd, type: long}
+    - {name: station_name, type: string}
+    - {name: station_name_k, type: string}
+    - {name: station_name_r, type: string}
+    - {name: line_cd, type: long}
+    - {name: pref_cd, type: long}
+    - {name: post, type: string}
+    - {name: add, type: string}
+    - {name: lon, type: double}
+    - {name: lat, type: double}
+    - {name: open_ymd, type: timestamp, format: '%Y-%m-%d'}
+    - {name: close_ymd, type: timestamp, format: '%Y-%m-%d'}
+    - {name: e_status, type: long}
+    - {name: e_sort, type: long}
+
+out:
+  type: mysql
+  user: 
+  password: 
+  host: mysql
+  port: 3306
+  database: 
+  table: stations
+  mode: insert
