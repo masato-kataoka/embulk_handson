@@ -4,8 +4,8 @@ See http://www.embulk.org for details.
 # Why are they bundled together?
 digdag provides native support to call embulk. Embulk enables data movement in many ETL workloads. This image enables the use of the native embulk support in digdag.
 
-# Start a embulk server instance with an in-memory database
-In this mode, digdag removes the data when the server exits. Use this for test purposes only.
+# Start a hands on environments
 
-    $ docker run -it --rm -p 3306:3307 masato-kataoka/embulk_handson
+    $ cd embulk_handson
+    $ docker-compose up -d
 
